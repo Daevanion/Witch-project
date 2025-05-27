@@ -1,0 +1,367 @@
+*{
+    padding: 0;
+    margin: 0; 
+    scroll-behavior: smooth;
+}
+
+a{
+    color: inherit;
+    text-decoration: inherit;
+}
+
+
+h1{
+    color: white;
+}
+
+img{
+    transition: .2s ease-in-out;
+}
+
+#main-title{
+    font-size: 5rem;
+    margin-top: 3rem;
+    position: relative;
+    transition: ease-in-out;
+    animation: imageHover 4s infinite;
+}
+
+h3{
+    color: white;
+}
+
+p{
+    color: white;
+}
+
+audio{
+    filter: sepia(20%) saturate(80%) grayscale(1) contrast(99%) invert(12%);
+    width: 200px;
+    height: 25px;
+}
+    
+
+
+div{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+
+}
+
+body{
+    animation: fade-in 0.75s;
+    font-family:"Mystery Quest" ;
+    background-image: url(fairy_background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(71, 65, 90);
+    color: rgb(0, 0, 0);
+}
+
+nav ul{
+    list-style: none;
+    text-align: center;
+    justify-content: baseline;
+    background-color: rgba(97, 27, 59, 0.596);
+    border-radius: 2rem;
+    margin: 2rem, 0rem, -1rem, 0rem;
+}
+nav p{
+    display: inline-block;
+    width: 20%;
+    align-items: center;
+    text-align: center;
+    color: rgb(226, 214, 43) ;
+    font-size: 1.5rem;
+    background-color: rgba(99, 66, 219, 0.747);
+    border-radius: 1rem;
+}
+
+nav li{
+    display: inline-block;
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: rgba(255, 255, 0, 0.096);
+    border-radius: 1rem;
+    padding: 0.2rem;
+    margin: 1rem 1rem 1rem;
+    cursor: pointer;
+    color: rgb(226, 214, 43);
+    transition: 0.2s ease-in-out;
+    border: 2px dotted rgba(0, 0, 0, 0);
+}
+
+nav li:hover{
+    color: white;
+    transform: scale(1.01);
+    border-radius: 1rem;
+    border: 2px dotted rgb(226, 214, 43);
+    background-color: rgba(242, 192, 255, 0.253);
+}
+
+
+#butterfly{
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    animation: flight 20s infinite;
+    z-index: 3;
+}
+
+#butterfly2{
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    transform: scale(.2);
+    animation-delay: 4000ms;
+    animation: flight2 20s infinite;
+    z-index: 3;
+}
+
+section{
+    display: grid;
+    grid-template-columns: 0.30fr, 0.3fr, 0.4fr;
+    grid-template-rows: 400px, 400px;
+    gap: 1em;
+    grid-template-areas:
+    "box1 box1 box2"
+    "box1 box1 box3"
+    "box1 box1 box3";
+    border: 2px solid;
+    border-radius: 5rem;
+    justify-content: center;
+    text-align: center;
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    background-size: stretch;
+    margin: 5rem;
+}
+
+section article:nth-child(1){
+    background-color: rgba(117, 67, 67, 0.479);
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 4rem;
+    justify-content: center;
+    align-items: center;
+    animation: imageHover 2s infinite;
+    position: relative;
+
+}
+
+section article:nth-child(2){
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 2rem;
+}
+
+.img_idle{
+    width: 40vw;
+    border: 2px dotted rgba(161, 39, 161, 0.644);
+    border-radius: 4rem;
+    transition: opacity 0.5s;
+    position: relative;
+}
+
+.img_active{
+    width: 40vw;
+    border: 2px dotted rgba(161, 39, 161, 0.644);
+    border-radius: 4rem;
+    transition: 0.2s ease-in-out;
+    transition: opacity 0.5s;
+    animation: imageActive 4s 1;
+}
+
+.hidden{
+    width: 40vw;
+    border: 2px dotted rgba(161, 39, 161, 0.644);
+    border-radius: 4rem;
+    transition: opacity 0.5s;
+    position: relative;
+    opacity: 0;
+}
+
+.btn{
+    color: rgb(226, 214, 43);
+    border-radius: 2rem;
+    background-color: rgba(165, 42, 42, 0.377);
+    font-family: "Mystery Quest";
+    font-size: 2.5rem;
+    margin: 1rem;
+    cursor: pointer;
+    transition: 1s ease-in-out;
+    padding: 2rem;
+    border: 2px solid rgba(240, 230, 93, 0.452);
+
+}
+
+.btn:hover{
+    transform: scale(1.05);
+    color: rgb(243, 138, 212);
+    border: 2px dotted rgb(211, 43, 226);
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
+@keyframes flight {
+    0%{
+        top: 1800px;
+        right: 0px;
+        transform:rotatez(0)
+    }
+    100%{
+        top: 0px;
+        right: 2000px;
+        transform:rotatez(40deg)
+    }
+
+}
+
+@keyframes flight2 {
+    0%{
+        top: 0px;
+        right: 0px;
+        transform:rotatez(180deg)
+    }
+    50%{
+        top: 2200px;
+        right: -600px;
+        transform:rotatez(150deg)
+    }
+
+}
+
+@keyframes imageHover {
+    0%{
+        top: 0px;
+    }
+    50%{
+        top: -5px;
+    }
+    100%{
+        top: 0px;
+    }
+}
+
+@keyframes imageActive{
+    0%{
+        transform: scale(1);
+        filter: sepia(20%) saturate(150%) contrast(99%) invert(12%) brightness(700%);
+    }
+    50%{
+        transform: scale(1.05);
+    }
+    60%{
+        transform: scale(1.04);
+    }
+    65%{
+        transform: scale(1.06); 
+    }
+    70%{
+        transform: scale(1.08);
+        filter: sepia(20%) saturate(150%) contrast(99%) invert(12%) brightness(100%);
+    }
+    80%{
+        transform: scale(1.12); 
+        opacity: 1;
+    }
+    95%{
+        transform: scale(1.09);
+        filter: sepia(20%) saturate(150%) contrast(99%) invert(12%) brightness(700%);
+    }
+    100%{
+        transform: scale(1);
+        opacity: 0; 
+    }
+}
+
+@media(max-width:56em){
+    section{
+        grid-template-columns: 500px;
+        grid-template-rows: 500px, 100px, 100px;
+        grid-template-areas:
+        "box1" 
+        "box3"
+        "box2";
+    }
+
+    nav ul{
+        left: 5vw;
+        right: 5vw;
+        position: absolute;
+    }
+
+    nav li{
+        font-size: 1rem;
+    }
+
+    .img_idle{
+        width: 60vw;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hidden{
+        width: 60vw;
+        align-items: center;
+        text-align: center;
+    }
+
+    .img_active{
+        width: 60vw;
+        align-items: center;
+        text-align: center;
+    }
+
+    section article:nth-child(1){
+    background-color: rgba(58, 52, 25, 0);
+    }
+
+    nav p{
+    display: inline-block;
+    width: 20%;
+    align-items: center;
+    text-align: center;
+    color: rgb(226, 214, 43) ;
+    font-size: 1rem;
+    background-color: rgba(99, 66, 219, 0.747);
+    border-radius: 1rem;
+    }
+    nav img{
+        display: none;
+    }
+}
+
+#skill_frame img{
+    display: none;
+}
+
+.animated-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    margin-top: -4rem ;
+}
+
+.animated-text span{
+    color: white;
+}
+
+.animated-text p{
+    color: violet;
+    font-size: larger;
+}
