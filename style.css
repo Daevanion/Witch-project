@@ -107,6 +107,7 @@ nav li:hover{
     position: fixed;
     right: 0px;
     top: 0px;
+    opacity: 0.5;
     animation: flight 20s infinite;
     z-index: 3;
 }
@@ -115,6 +116,7 @@ nav li:hover{
     position: fixed;
     right: 0px;
     top: 0px;
+    opacity: 0.5;
     transform: scale(.2);
     animation-delay: 4000ms;
     animation: flight2 20s infinite;
