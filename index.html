@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mystery+Quest&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript">
         var mana = 50;
@@ -23,13 +24,14 @@
             </audio>
         </div>
         <nav>
-            <ul id="nav-links">
+            <ul class="nav-links">
                 <li><a href="#conjure_button">Conjuring Cauldron</a></li>
                 <li>Spell Book</li>
                 <li>Credits</li>
                 <p>Mana: <script type="text/javascript">document.write(mana)</script>
                  <img src="diamond.png" width="10%"></p>
             </ul>
+            <i class="fa-solid fa-bars" id="menu-icon"></i>
         </nav>
         <div id="butterfly">
             <img src="butterfly_particle.gif" width="15%">
@@ -41,7 +43,7 @@
     
     <main>
         <section id="main-interaction">
-            <article style="grid-area: box1">
+            <article id="image_arti" style="grid-area: box1">
                 <img id="theImage" src="idle_witch_animated.gif" class="img_idle">
             </article>
             <article style="grid-area: box2" id="conjure_button">

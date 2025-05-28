@@ -1,6 +1,20 @@
 const delayMili = 4000;
 const delayMili_hide = 3500;
 const delayMili2 = 3000;
+const menuIcon = document.querySelector('#menu-icon');
+const navLinks = document.querySelector('.nav-links');
+
+menuIcon.onclick = () => {
+    navLinks.classList.toggle('active');
+}
+
+menuIcon.addEventListener('click',menuSway);
+
+
+function menuSway(){
+    if(navLinks == true)
+        menuIcon.classList.toggle('#menu-icon-moved');
+}
 
 
 function conjureSpell(){

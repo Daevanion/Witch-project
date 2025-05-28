@@ -26,6 +26,11 @@ img{
     animation: imageHover 4s infinite;
 }
 
+#menu-icon{
+   font-size: 2rem;
+   display: none;
+}
+
 h3{
     color: white;
 }
@@ -290,7 +295,8 @@ section article:nth-child(2){
     }
 }
 
-@media(max-width:600px){
+
+@media(max-width:720px){
     section{
         grid-template-columns: 500px;
         grid-template-rows: 500px, 100px, 100px;
@@ -298,6 +304,11 @@ section article:nth-child(2){
         "box1" 
         "box3"
         "box2";
+    }
+
+    section #image_arti{
+        display: absolute;
+        margin-bottom: 4rem;
     }
 
     nav ul{
@@ -311,19 +322,19 @@ section article:nth-child(2){
     }
 
     .img_idle{
-        width: 60vw;
+        width: 70vw;
         align-items: center;
         text-align: center;
     }
 
     .hidden{
-        width: 60vw;
+        width: 70vw;
         align-items: center;
         text-align: center;
     }
 
     .img_active{
-        width: 60vw;
+        width: 70vw;
         align-items: center;
         text-align: center;
     }
@@ -345,16 +356,63 @@ section article:nth-child(2){
     nav img{
         display: none;
     }
+
+    .nav-links{
+      position: absolute;
+      top: 50%;
+      margin-top: 0.5rem;
+      width: 50%;
+      padding: 0.5rem;
+      color: white;
+      display:flex;
+      flex-direction: column;
+      text-align: center;
+      background: rgba(68, 15, 15, 0.8);
+      border-radius: 3rem;
+      display: none;
+      font-size: small;
+      z-index: 2;
+   }
+   .nav-links li{
+      margin-top: 1.5rem;
+      padding: 0.4rem;
+   }
+   .nav-links.active{
+      display: block;
+   }
+
+   #menu-icon{
+      display: block;
+      color: white;
+      text-align: center;
+      background-color: rgba(110, 33, 33, 0.685);
+      font-size: 4rem;
+      cursor: pointer;
+   }
+
 }
 
+@media(max-width:1600px){
+    section{
+        grid-template-columns: 500px, 500px;
+        grid-template-rows: 200px, 500px;
+        grid-template-areas:
+        "box1 box2" 
+        "box3 box2";
+    }
+    
+    #theImage{
+        position: relative;
+    }
+}
 
-@media(max-width:400px){
+@media(max-width:600px){
     *{
 
     }
 
     body{
-        overflow: hidden;
+        overflow-x: hidden;
     }
     
     section{
@@ -368,12 +426,17 @@ section article:nth-child(2){
     }
     .btn{
         font-size: 1.4rem;
-        padding: 1rem;
+        padding: 1.2rem;
+        margin: 0.2rem;
     }
 
     .img_idle{
         position: relative;
         top:50px;
+    }
+
+    .animated-text span{
+        font-size: small;
     }
 
 }
