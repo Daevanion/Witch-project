@@ -290,7 +290,7 @@ section article:nth-child(2){
     }
 }
 
-@media(max-width:56em){
+@media(max-width:600px){
     section{
         grid-template-columns: 500px;
         grid-template-rows: 500px, 100px, 100px;
@@ -345,6 +345,37 @@ section article:nth-child(2){
     nav img{
         display: none;
     }
+}
+
+
+@media(max-width:400px){
+    *{
+
+    }
+
+    body{
+        overflow: hidden;
+    }
+    
+    section{
+        margin:1rem;
+        grid-template-columns: 500px;
+        grid-template-rows: 500px, 100px, 100px;
+        grid-template-areas:
+        "box1" 
+        "box3"
+        "box2";
+    }
+    .btn{
+        font-size: 1.4rem;
+        padding: 1rem;
+    }
+
+    .img_idle{
+        position: relative;
+        top:50px;
+    }
+
 }
 
 #skill_frame img{
