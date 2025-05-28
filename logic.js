@@ -13,7 +13,6 @@ class Spell  {
 
 
 
-
 function capFirst(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
@@ -70,7 +69,6 @@ function generateName(){
 
 }
 const mana = 50;
-let spellList = [];
 
 
 let spellindex = [];
@@ -78,26 +76,31 @@ let spellno = 0
 
 
 
+function createObject(spellno){
+        const name =`object${spellno}`;
+        spellindex[name] = new Spell(spellno, generateName());
+            
+        spellindex.push(name);
+}
 
 
 function spellRandom(){
     if(mana > 0){
         let spellno = (spellindex.length + 1);
-
-        
-        
-        function createObject(){
-            const name =`object${spellno}`;
-            spellindex[name] = new Spell(spellno, generateName());
-            
-            spellindex.push(name);
-            
-        }
-        createObject();
-
-    
-        
+        createObject(spellno);
+        document.getElementById("skill-name").innerHTML="hello!";
+        console.log(spellindex[`object${spellno}`]);
     } else {
         console.log('not enough mana to proceed');
     }
 }
+
+function textChangetest(){
+    document.getElementById("skill-name").innerHTML="hello!";
+}
+
+spellRandom();
+
+
+
+

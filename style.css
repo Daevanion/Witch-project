@@ -135,7 +135,7 @@ section{
     gap: 1em;
     grid-template-areas:
     "box1 box1 box2"
-    "box1 box1 box3"
+    "box1 box1 box2"
     "box1 box1 box3";
     border: 2px solid;
     border-radius: 5rem;
@@ -466,4 +466,8 @@ section article:nth-child(2){
 .animated-text p{
     color: violet;
     font-size: larger;
+}
+
+#skill-name{
+    color: white;
 }
