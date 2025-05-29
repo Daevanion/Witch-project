@@ -19,7 +19,7 @@
         <div>
             <h1 id="main-title">Welcome to the Cauldron!</h1>
             <h3>You are to conjure spells until our daily wizard quota is met... So get to it</h3>
-            <audio autoplay loop controls>
+            <audio loop controls>
                 <source src="Miroir.mp3" type="audio/mpeg">
             </audio>
         </div>
@@ -49,22 +49,20 @@
             <article style="grid-area: box2" id="conjure_button">
                 <button type="button" class="btn" id="spell-gen" onclick="conjureSpell()">Conjure</button>
                 <button type="button" class="btn" id="spell-banish" onclick="banishSpell()">Banish Spell</button>
-                <button type="button" class="btn" id="spell-store" onclick="textChangetest()">Store Spell</button>
+                <button type="button" class="btn" id="spell-store" onclick="spellRandom()">Store Spell</button>
             </article>
             <article style="grid-area: box3" id="skill_frame">
-                <div class="skill-stats">
-                    <h2 id="skill-name">This is a test</h2>
-                </div>
                 <div class="animated-text">
                     <p>Witch: <span id="words">"Greetings!"</span></p>
-                </div>
-                <img src="bunny_skill.png" width="50%">
+                </div>    
+            </article>
+            <article class="skill-stats" style="grid-area: box4">
+                    <h2 id="skill-name" class="skill-animation-off">This is a test</h2>
+                    <img id="skill-img" src="bunny_skill.png" width="30%">
             </article>
         </section>
 
     </main>
-    <script src="/logic.js"></script>
-    <script src="/script.js"></script>
     <script type="text/javascript">
       (function () {
         var words = ["Stop dwindling around and get to work.","Why are you so slow? is that normal?","Stop slacking!","...","I hope we can do this better next time..." ],
@@ -74,5 +72,7 @@
           }); }, Math.random()*50000)
       })();
     </script>
+    <script src="/script.js"></script>
+    <script src="/logic.js"></script>
 </body>
 </html>

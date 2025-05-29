@@ -1,4 +1,6 @@
 
+console.log("logic.js loaded");
+
 class Spell  {
     constructor(spellnumber ,spellname, element, manaCost, category, skillImage){
         this.spellnumber = spellnumber;
@@ -68,7 +70,6 @@ function generateName(){
 	return name;
 
 }
-const mana = 50;
 
 
 let spellindex = [];
@@ -88,18 +89,15 @@ function spellRandom(){
     if(mana > 0){
         let spellno = (spellindex.length + 1);
         createObject(spellno);
-        document.getElementById("skill-name").innerHTML="hello!";
-        console.log(spellindex[`object${spellno}`]);
+        var i = spellindex[`object${spellno}`];
+        document.getElementById("skill-name").innerHTML=i.spellname;
+        document.getElementById("skill-name").classList="skill-animation-on";
+        console.log(i.spellname);
     } else {
         console.log('not enough mana to proceed');
     }
 }
 
-function textChangetest(){
-    document.getElementById("skill-name").innerHTML="hello!";
-}
-
-spellRandom();
 
 
 

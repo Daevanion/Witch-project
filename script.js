@@ -20,6 +20,7 @@ function conjureSpell(){
 
     setTimeout(function(){
         document.getElementById("theImage").classList="hidden";
+        spellRandom()
     }, delayMili_hide);
     
     setTimeout(function(){

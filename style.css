@@ -115,6 +115,7 @@ nav li:hover{
     opacity: 0.5;
     animation: flight 20s infinite;
     z-index: 3;
+    pointer-events: none;
 }
 
 #butterfly2{
@@ -126,16 +127,18 @@ nav li:hover{
     animation-delay: 4000ms;
     animation: flight2 20s infinite;
     z-index: 3;
+    pointer-events: none;
 }
 
 section{
     display: grid;
     grid-template-columns: 0.30fr, 0.3fr, 0.4fr;
-    grid-template-rows: 400px, 400px;
+    grid-template-rows: 400px, 400px ,100px, 100px;
     gap: 1em;
     grid-template-areas:
     "box1 box1 box2"
     "box1 box1 box2"
+    "box1 box1 box4"
     "box1 box1 box3";
     border: 2px solid;
     border-radius: 5rem;
@@ -189,6 +192,10 @@ section article:nth-child(2){
     transition: opacity 0.5s;
     position: relative;
     opacity: 0;
+}
+
+.skill-stats img{
+    display: none;
 }
 
 .btn{
@@ -298,11 +305,12 @@ section article:nth-child(2){
 
 @media(max-width:720px){
     section{
-        grid-template-columns: 500px;
-        grid-template-rows: 500px, 100px, 100px;
+        grid-template-columns: 700px;
+        grid-template-rows: 500px, 100px, 100px, 100px;
         grid-template-areas:
         "box1" 
         "box3"
+        "box4"
         "box2";
     }
 
@@ -388,23 +396,46 @@ section article:nth-child(2){
 
 }
 
-@media(min-width:1600px){
-    section{
-        grid-template-columns: 500px, 500px;
-        grid-template-rows: 200px, 500px;
-        grid-template-areas:
-        "box1 box2" 
-        "box3 box2";
+@media(min-width:1360px){
+    .btn{
+        font-size: 3rem;
     }
-    
-    #theImage{
-        position: relative;
+}
+
+@media(max-width:1200px){
+    section{
+    display: grid;
+    grid-template-columns: 0.60fr, 0.4fr;
+    grid-template-rows: 200px, 100px ,100px,;
+    gap: 1em;
+    grid-template-areas:
+    "box1 box2"
+    "box4 box3"
+    "box4 box3";
+    border: 2px solid;
+    border-radius: 5rem;
+    justify-content: center;
+    text-align: center;
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+    section article:nth-child(1){
+    background-color: rgba(117, 67, 67, 0);
+    padding: 1rem;
+    margin-left: 2rem;
+    margin-top: 5rem;
+    border-radius: 4rem;
+    justify-content: center;
+    align-items: center;
+    animation: imageHover 2s infinite;
+    position: relative;
     }
 }
 
 @media(max-width:600px){
     #main-title{
-    font-size: 4rem;
+    font-size: 3rem;
     margin-top: 3rem;
     }
 
@@ -419,16 +450,19 @@ section article:nth-child(2){
     section{
         margin:1rem;
         grid-template-columns: 500px;
-        grid-template-rows: 500px, 100px, 100px;
+        grid-template-rows: 500px, 100px, 100px, 100px;
         grid-template-areas:
         "box1" 
         "box3"
+        "box4"
         "box2";
     }
     .btn{
         font-size: 1.4rem;
-        padding: 1.2rem;
+        padding: 0.2rem;
         margin: 0.2rem;
+        direction: column;
+        flex-wrap: wrap;
     }
 
     .img_idle{
@@ -442,14 +476,15 @@ section article:nth-child(2){
     }
 
     .animated-text span{
-        font-size: small;
+        font-size: 0.8rem;
+    }
+    #skill-name{
+    color: rgb(219, 117, 0);
     }
 
 }
 
-#skill_frame img{
-    display: none;
-}
+
 
 .animated-text{
     display: flex;
@@ -470,4 +505,24 @@ section article:nth-child(2){
 
 #skill-name{
     color: white;
+    position: relative;
+    animation: imageHover 4s infinite;
+    transition: 0.3s ease-in-out;
+}
+
+#skill-name:hover{
+    transform: scale(1.05);
+    color: rgb(219, 117, 0);
+}
+
+
+.skill-animation-off{
+    transition: opacity 0.5s;
+    opacity: 0;
+    color: white;
+}
+
+.skill-animation-on{
+    transition: opacity 1s;
+    opacity: 1;
 }
