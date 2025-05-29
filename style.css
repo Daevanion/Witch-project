@@ -31,6 +31,10 @@ img{
    display: none;
 }
 
+#menu-close-button{
+    display: none;
+}
+
 h3{
     color: white;
 }
@@ -316,7 +320,12 @@ section article:nth-child(2){
     body{
         overflow-x: hidden;
     }
-    
+    #menu-close-button{
+        display: inline-block;
+        background-color: transparent;
+        color: rgb(255, 0, 0);
+    }
+
     section{
         margin:1rem;
         grid-template-columns: 500px;
@@ -508,6 +517,7 @@ nav li{
         border: 1px solid rgba(231, 220, 61, 0.514);
         position: relative;
         bottom: 80%;
+        margin: 1rem;
     }
 
 }

@@ -4,9 +4,13 @@ const delayMili_hide = 3500;
 const delayMili2 = 3000;
 const menuIcon = document.querySelector('#menu-icon');
 const navLinks = document.querySelector('.nav-links');
-
+const menuClosebtn = document.querySelector('#menu-close-button');
 
 menuIcon.onclick = () => {
+    navLinks.classList.toggle('active');
+}
+
+menuClosebtn.onclick = () => {
     navLinks.classList.toggle('active');
 }
 
