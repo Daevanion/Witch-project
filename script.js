@@ -40,6 +40,8 @@ function banishSpell(){
     
     setTimeout(function(){
         document.getElementById("theImage").classList="hidden";
+        document.getElementById("skill-name").classList="skill-animation-off";
+        document.getElementById("skill-desc").classList="skill-animation-off";
     }, delayMili_hide);
     
     setTimeout(function(){
@@ -50,7 +52,12 @@ function banishSpell(){
 };
 
 
+const skillUi = document.querySelector('#skill-ui');
+const skillbtn = document.querySelector('#skill-name');
 
+skillbtn.onclick = () => {
+     skillUi.classList.toggle('active');
+}
 
 
 

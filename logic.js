@@ -90,10 +90,22 @@ function spellRandom(){
         let spellno = (spellindex.length + 1);
         createObject(spellno);
         var i = spellindex[`object${spellno}`];
+// This line will display random skill name       
         document.getElementById("skill-name").innerHTML=i.spellname;
+// This is the animation engage line (hidden class opacity animation)
         document.getElementById("skill-name").classList="skill-animation-on";
+// This is the skill stats assigner to p element. needs to be worked at to make it more dynamic
+        document.getElementById("skill-desc").innerHTML=`Element: 
+        ${i.element}
+        Mana cost: ${i.manaCost}
+        Category: ${i.category}`;
+
+        document.getElementById("skill-desc").classList="skill-animation-on";
         console.log(i.spellname);
+        console.log(i.element);
     } else {
+        document.getElementById("skill-name").innerHTML="Not enough Mana.";
+        document.getElementById("skill-name").classList="skill-animation-on";
         console.log('not enough mana to proceed');
     }
 }
