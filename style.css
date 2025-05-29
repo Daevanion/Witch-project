@@ -369,7 +369,7 @@ section article:nth-child(2){
         position: relative;
         width: 60vw;  
     }
-
+    
     .animated-text span{
         font-size: 0.8rem;
     }
@@ -442,13 +442,15 @@ section article:nth-child(1){
 nav li{
     font-size: 2rem;
 }
+.animated-text{
+    align-items: center;
+}
 .animated-text span{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .animated-text p{
     color: violet;
-    font-size: 2rem;
 }
 .img_idle{
     width: 50vw;
@@ -466,7 +468,14 @@ nav li{
     border: 3px dotted rgba(161, 39, 161, 0.644);
 }
 }
+@media(min-width:768px){
+    .animated-text{
+    align-items: center;
+    margin-top: -2rem;
 
+    background-color: rgba(13, 114, 55, 0);
+    }
+}
 @media(min-width:992px){
     section{
     display: grid;
@@ -512,23 +521,42 @@ nav li{
 
     .skill-stats{
         background-color: rgba(0, 0, 0, 0.384);
-        padding: 1rem;
+        padding: 0.5rem;
         border-radius: 1rem;
         border: 1px solid rgba(231, 220, 61, 0.514);
         position: relative;
         bottom: 80%;
-        margin: 1rem;
+        margin-right: 5rem;
+        margin-bottom: -1rem;
     }
-
+    .animated-text{
+    align-items: center;
+    margin-top: -30%; 
+    background-color: rgba(112, 114, 13, 0);
+    }
+    .btn{
+        font-size: 1.5rem;
+        padding-left:5rem;
+        padding-right:5rem;
+        padding-top: -1rem;
+        padding-bottom: -1rem;
+    }
 }
 
+@media(min-width:1160px){
+    .animated-text{
+    display: inline-block;
+    align-items: center;
+    margin-top: -1rem; 
+    background-color: rgba(13, 111, 114, 0);
+    }
+}
 
 .animated-text{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 10vh;
-    margin-top: -4rem ;
 }
 
 .animated-text span{
